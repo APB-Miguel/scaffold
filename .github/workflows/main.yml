@@ -1,0 +1,23 @@
+name: Python application test with github actions
+on: [push]
+jobs: 
+  build: 
+    runs—on: ubuntu—latest 
+    steps: 
+    - uses: actions/setup-python@vl
+    - name: Set up Python 3.8  
+      uses: actions/checkout@v2 
+      with: 
+        python-version: 3.8 
+    - name: Instalt dependencies 
+      run: | 
+        make install 
+    — name: Lint with Pylint 
+      run: |
+        make lint 
+    — name: Test with Pytest 
+      run: | 
+        make test 
+    — name: Format code with Python black 
+      run: | 
+        make format 
