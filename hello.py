@@ -1,7 +1,7 @@
 def add(_x, _y):
     return _x + _y
 
-var=
+
 x = 3
 y = 2
 result = add(x, y)
